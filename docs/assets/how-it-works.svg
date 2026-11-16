@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F1F5F9"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38BDF8"/>
+      <stop offset="0.5" stop-color="#818CF8"/>
+      <stop offset="1" stop-color="#C084FC"/>
+    </linearGradient>
+    <marker id="farrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="480" fill="url(#bg)"/>
+
+  <!-- Top title -->
+  <text x="600" y="36" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="18" font-weight="700" text-anchor="middle">
+    How a skill becomes a verified fix
+  </text>
+  <text x="600" y="58" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" text-anchor="middle">
+    One-time install · Any AI coding agent · Normalized findings · Framework-grounded remediation
+  </text>
+
+  <!-- Horizontal flow background bar -->
+  <rect x="80" y="100" width="1040" height="3" fill="url(#flow)" rx="2"/>
+
+  <!-- Step dots on the bar -->
+  <g>
+    <circle cx="180" cy="102" r="9" fill="#38BDF8" stroke="white" stroke-width="3"/>
+    <circle cx="390" cy="102" r="9" fill="#60A5FA" stroke="white" stroke-width="3"/>
+    <circle cx="600" cy="102" r="9" fill="#818CF8" stroke="white" stroke-width="3"/>
+    <circle cx="810" cy="102" r="9" fill="#A78BFA" stroke="white" stroke-width="3"/>
+    <circle cx="1020" cy="102" r="9" fill="#C084FC" stroke="white" stroke-width="3"/>
+  </g>
+
+  <!-- STEP 1: Install -->
+  <g transform="translate(80, 130)">
+    <rect x="0" y="0" width="200" height="190" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="16" y="28" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1">STEP 1</text>
+    <text x="16" y="50" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="16" font-weight="700">Install</text>
+    <text x="16" y="75" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12">
+      <tspan x="16" dy="0">Drop the skills folder into</tspan>
+      <tspan x="16" dy="16">your AI coding agent.</tspan>
+      <tspan x="16" dy="16">One-time setup.</tspan>
+    </text>
+    <g transform="translate(16, 140)">
+      <rect x="0" y="0" width="168" height="34" rx="4" fill="#0F172A"/>
+      <text x="12" y="20" fill="#38BDF8" font-family="ui-monospace, Menlo, Monaco, monospace" font-size="10">$ cp -r skills/*/* \</text>
+      <text x="12" y="30" fill="#E2E8F0" font-family="ui-monospace, Menlo, Monaco, monospace" font-size="10">    ~/.claude/skills/</text>
+    </g>
+  </g>
+
+  <!-- STEP 2: Invoke -->
+  <g transform="translate(290, 130)">
+    <rect x="0" y="0" width="200" height="190" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="16" y="28" fill="#60A5FA" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1">STEP 2</text>
+    <text x="16" y="50" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="16" font-weight="700">Invoke</text>
+    <text x="16" y="75" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12">
+      <tspan x="16" dy="0">Ask the agent to review,</tspan>
+      <tspan x="16" dy="16">or let a PR / commit hook</tspan>
+      <tspan x="16" dy="16">trigger it automatically.</tspan>
+    </text>
+    <g transform="translate(16, 140)">
+      <rect x="0" y="0" width="168" height="34" rx="4" fill="#0F172A"/>
+      <text x="12" y="20" fill="#A78BFA" font-family="ui-monospace, Menlo, Monaco, monospace" font-size="10">&gt; Review this agent for</text>
+      <text x="12" y="30" fill="#E2E8F0" font-family="ui-monospace, Menlo, Monaco, monospace" font-size="10">    memory isolation issues</text>
+    </g>
+  </g>
+
+  <!-- STEP 3: Scan -->
+  <g transform="translate(500, 130)">
+    <rect x="0" y="0" width="200" height="190" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="16" y="28" fill="#818CF8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1">STEP 3</text>
+    <text x="16" y="50" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="16" font-weight="700">Scan</text>
+    <text x="16" y="75" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12">
+      <tspan x="16" dy="0">The agent auto-loads the</tspan>
+      <tspan x="16" dy="16">right skill, applies rules,</tspan>
+      <tspan x="16" dy="16">matches detection patterns.</tspan>
+    </text>
+    <g transform="translate(16, 140)">
+      <rect x="0" y="0" width="168" height="34" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="12" y="16" fill="#334155" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="10">memory-isolation.md</text>
+      <text x="12" y="28" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="9">OWASP-Agentic-Top-10 · LLM03</text>
+    </g>
+  </g>
+
+  <!-- STEP 4: Report -->
+  <g transform="translate(710, 130)">
+    <rect x="0" y="0" width="200" height="190" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="16" y="28" fill="#A78BFA" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1">STEP 4</text>
+    <text x="16" y="50" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="16" font-weight="700">Report</text>
+    <text x="16" y="75" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12">
+      <tspan x="16" dy="0">Structured findings with</tspan>
+      <tspan x="16" dy="16">severity, control ID,</tspan>
+      <tspan x="16" dy="16">evidence, and a fix patch.</tspan>
+    </text>
+    <g transform="translate(16, 140)">
+      <rect x="0" y="0" width="168" height="34" rx="4" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1"/>
+      <circle cx="16" cy="17" r="5" fill="#EF4444"/>
+      <text x="30" y="16" fill="#991B1B" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="10" font-weight="600">HIGH · MEM-001</text>
+      <text x="30" y="28" fill="#7F1D1D" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="9">Shared namespace default</text>
+    </g>
+  </g>
+
+  <!-- STEP 5: Remediate -->
+  <g transform="translate(920, 130)">
+    <rect x="0" y="0" width="200" height="190" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+    <text x="16" y="28" fill="#C084FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1">STEP 5</text>
+    <text x="16" y="50" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="16" font-weight="700">Remediate &amp; Verify</text>
+    <text x="16" y="75" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12">
+      <tspan x="16" dy="0">Apply the fix, re-run the</tspan>
+      <tspan x="16" dy="16">skill. Verification test</tspan>
+      <tspan x="16" dy="16">proves the issue is gone.</tspan>
+    </text>
+    <g transform="translate(16, 140)">
+      <rect x="0" y="0" width="168" height="34" rx="4" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
+      <circle cx="16" cy="17" r="5" fill="#22C55E"/>
+      <text x="30" y="16" fill="#166534" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="10" font-weight="600">test_passed</text>
+      <text x="30" y="28" fill="#15803D" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="9">cross_session_isolation ✓</text>
+    </g>
+  </g>
+
+  <!-- Bottom section: output destinations -->
+  <g transform="translate(80, 360)">
+    <text x="0" y="0" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11" font-weight="600" letter-spacing="1">FINDINGS FLOW TO</text>
+
+    <g transform="translate(0, 18)">
+      <!-- PR comment -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="150" height="60" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+        <text x="75" y="24" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">PR review</text>
+        <text x="75" y="44" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="10" text-anchor="middle">file:line · fix patch</text>
+      </g>
+
+      <!-- SARIF -->
+      <g transform="translate(170, 0)">
+        <rect x="0" y="0" width="150" height="60" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+        <text x="75" y="24" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">SARIF 2.1</text>
+        <text x="75" y="44" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="10" text-anchor="middle">GitHub · GitLab · IDE</text>
+      </g>
+
+      <!-- Tracker -->
+      <g transform="translate(340, 0)">
+        <rect x="0" y="0" width="150" height="60" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+        <text x="75" y="24" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Tracker</text>
+        <text x="75" y="44" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="10" text-anchor="middle">Jira · GitHub · Linear</text>
+      </g>
+
+      <!-- Dashboard -->
+      <g transform="translate(510, 0)">
+        <rect x="0" y="0" width="150" height="60" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+        <text x="75" y="24" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Dashboard</text>
+        <text x="75" y="44" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="10" text-anchor="middle">normalized JSON</text>
+      </g>
+
+      <!-- Compliance -->
+      <g transform="translate(680, 0)">
+        <rect x="0" y="0" width="150" height="60" rx="8" fill="white" stroke="#E2E8F0" stroke-width="1.5"/>
+        <text x="75" y="24" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Compliance</text>
+        <text x="75" y="44" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="10" text-anchor="middle">audit evidence</text>
+      </g>
+
+      <!-- AI RMF / ISO 42001 -->
+      <g transform="translate(850, 0)">
+        <rect x="0" y="0" width="190" height="60" rx="8" fill="#0F172A"/>
+        <text x="95" y="24" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Mapped controls</text>
+        <text x="95" y="44" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="10" text-anchor="middle">NIST AI RMF · ISO 42001 · SOC 2</text>
+      </g>
+    </g>
+  </g>
+</svg>

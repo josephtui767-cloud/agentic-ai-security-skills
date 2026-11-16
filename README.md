@@ -70,6 +70,26 @@ Prompt injection defended on user input, not retrieved → RAG as attack vector
 
 ---
 
+## How It Works
+
+<p align="center">
+  <img src="docs/assets/how-it-works.svg" alt="How a skill becomes a verified fix" width="100%"/>
+</p>
+
+Five steps from installation to a verified fix:
+
+| Step | What happens | Who does it |
+|:-:|---|---|
+| **1. Install** | Drop the skills folder into your AI coding agent's skill path. One-time setup. | You |
+| **2. Invoke** | Ask the agent to review ("review this agent for memory isolation"), or let a PR / commit hook trigger it. | You or CI |
+| **3. Scan** | The agent auto-loads the right `SKILL.md`, applies the hard rules, and matches detection patterns against the target. | Agent |
+| **4. Report** | Structured findings land in your IDE or PR with severity, framework control ID, evidence, and a concrete fix patch. | Agent |
+| **5. Remediate & verify** | Apply the fix. The skill ships a falsifiable verification test — re-run it and get a binary pass. | You |
+
+Findings flow to PR comments, SARIF 2.1, trackers (Jira / GitHub / Linear), dashboards, and compliance evidence mapped to NIST AI RMF, ISO 42001, and SOC 2.
+
+---
+
 ## Quick Start
 
 ```bash
