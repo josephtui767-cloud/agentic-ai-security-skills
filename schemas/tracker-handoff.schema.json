@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/agentic-ai-security-skills/schemas/tracker-handoff.schema.json",
+  "title": "Agentic AI Security Skills Tracker Handoff",
+  "description": "Shape for tracker-ready work items produced from normalized findings. Tracker-system-agnostic (Jira, GitHub Issues, GitLab Issues, Linear, Asana).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["items"],
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title", "severity", "description", "evidence", "remediation", "owner_suggestion", "sla_target"],
+        "properties": {
+          "title": { "type": "string", "minLength": 1, "maxLength": 120 },
+          "severity": { "type": "string", "enum": ["info", "low", "medium", "high", "critical"] },
+          "description": { "type": "string" },
+          "evidence": { "type": "array", "items": { "type": "string" } },
+          "framework_refs": { "type": "array", "items": { "type": "string" } },
+          "remediation": { "type": "string" },
+          "owner_suggestion": { "type": "string" },
+          "sla_target": {
+            "type": "object",
+            "properties": {
+              "severity": { "type": "string" },
+              "resolution_within_days": { "type": "integer", "minimum": 1 }
+            }
+          },
+          "labels": { "type": "array", "items": { "type": "string" } },
+          "finding_id": { "type": "string" }
+        }
+      }
+    }
+  }
+}

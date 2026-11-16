@@ -1,0 +1,33 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.kiro/
+
+# Node
+node_modules/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Ruby
+.bundle/
+vendor/bundle/
+
+# Build outputs
+dist/
+build/
+coverage/
+
+# Local env
+.env
+.env.local

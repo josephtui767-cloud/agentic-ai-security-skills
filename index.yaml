@@ -1,0 +1,663 @@
+# index.yaml
+# Agentic AI Security Skills — Index
+# Schema version: 1.0
+# Discovery: grep tags, jq .skills[], or LLM native parse
+
+meta:
+  version: "1.0.0"
+  last_updated: "2026-11-16"
+  skill_count: 60
+  role_count: 5
+
+tag_vocabulary:
+  domains: [agent-architecture, agent-memory, agent-tools, agent-identity, agent-alignment, agent-observability, multi-agent, agent-containment, agent-io, agent-testing, agent-threat-detection, agent-lifecycle, agent-data, agent-infrastructure, agent-recovery]
+  activities: [review, design, audit, assess, test, configure, monitor, contain, investigate, remediate]
+  phases: [design, build, deploy, operate, respond, review, assess]
+  difficulty: [beginner, intermediate, advanced]
+
+skills:
+  # -- Agent Architecture --------------------------------------------------
+  - id: llm-scope-minimization
+    name: "LLM Scope Minimization Review"
+    tags: [agent-architecture, design, review]
+    role: [ai-architect, ai-security-engineer]
+    phase: [design, review]
+    frameworks: [OWASP-Agentic-AI, OWASP-LLM01-2025, AWS-Agentic-AI-Prescriptive]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-architecture/llm-scope-minimization/SKILL.md
+
+  - id: agent-scoping-review
+    name: "Agent Scoping and Boundary Review"
+    tags: [agent-architecture, design, scoping]
+    role: [ai-architect, ai-security-engineer]
+    phase: [design, review]
+    frameworks: [OWASP-Agentic-AI, MITRE-ATLAS, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "45-90min"
+    file: skills/agent-architecture/agent-scoping-review/SKILL.md
+
+  - id: session-isolation-review
+    name: "Agent Session Isolation Review"
+    tags: [agent-architecture, review, session]
+    role: [ai-security-engineer]
+    phase: [build, review]
+    frameworks: [OWASP-Session-Management, OWASP-LLM02-2025, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-architecture/session-isolation-review/SKILL.md
+
+  # -- Agent Memory --------------------------------------------------------
+  - id: memory-isolation
+    name: "Agent Memory Isolation Review"
+    tags: [agent-memory, review, isolation]
+    role: [ai-security-engineer, ai-architect]
+    phase: [design, build, review]
+    frameworks: [OWASP-Agentic-Top-10-2026, OWASP-LLM03-2025, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/agent-memory/memory-isolation/SKILL.md
+
+  - id: memory-input-validation
+    name: "Agent Memory Write-Path Validation"
+    tags: [agent-memory, validation]
+    role: [ai-security-engineer]
+    phase: [build, review]
+    frameworks: [OWASP-LLM01-2025, OWASP-Agentic-AI, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-memory/memory-input-validation/SKILL.md
+
+  - id: hallucination-propagation
+    name: "Hallucination Propagation Detection"
+    tags: [agent-memory, hallucination, grounding]
+    role: [ai-security-engineer, ml-engineer]
+    phase: [build, operate]
+    frameworks: [OWASP-LLM09-2025, NIST-AI-RMF-1.0, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/agent-memory/hallucination-propagation/SKILL.md
+
+  - id: shared-memory-broker
+    name: "Shared Memory Broker Review"
+    tags: [agent-memory, broker, multi-agent]
+    role: [ai-architect, ai-security-engineer]
+    phase: [design, build, review]
+    frameworks: [OWASP-Agentic-AI, AWS-Agentic-AI-Prescriptive]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/agent-memory/shared-memory-broker/SKILL.md
+
+  # -- Agent Tools ---------------------------------------------------------
+  - id: tool-authorization
+    name: "Agent Tool Authorization Review"
+    tags: [agent-tools, authorization, oauth]
+    role: [ai-security-engineer]
+    phase: [build, review]
+    frameworks: [OWASP-Agentic-AI, OAuth-2.1, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "45-90min"
+    file: skills/agent-tools/tool-authorization/SKILL.md
+
+  - id: tool-parameter-validation
+    name: "Model-Generated Tool Parameter Validation"
+    tags: [agent-tools, validation, llm-args]
+    role: [ai-security-engineer, appsec-engineer]
+    phase: [build, review]
+    frameworks: [OWASP-Agentic-AI, CWE-Top-25, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-tools/tool-parameter-validation/SKILL.md
+
+  - id: tool-registry-governance
+    name: "Agent Tool Registry Governance"
+    tags: [agent-tools, registry, governance]
+    role: [ai-security-engineer, mlops-security]
+    phase: [build, operate]
+    frameworks: [SLSA-v1.0, OWASP-Agentic-AI, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-tools/tool-registry-governance/SKILL.md
+
+  - id: mcp-server-security
+    name: "MCP Server Security Review"
+    tags: [agent-tools, mcp, protocol]
+    role: [ai-security-engineer]
+    phase: [build, operate, review]
+    frameworks: [MCP-Spec, OAuth-2.1, OWASP-Agentic-AI]
+    difficulty: intermediate
+    time_estimate: "45-90min"
+    file: skills/agent-tools/mcp-server-security/SKILL.md
+
+  # -- Agent Identity ------------------------------------------------------
+  - id: agent-identity-separation
+    name: "Agent Identity Separation Review"
+    tags: [agent-identity, iam, separation]
+    role: [ai-security-engineer, identity-engineer]
+    phase: [design, build, review]
+    frameworks: [OWASP-Agentic-AI, NIST-SP-800-63B, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "60-120min"
+    file: skills/agent-identity/agent-identity-separation/SKILL.md
+
+  - id: least-privilege-dynamic
+    name: "Agent Least Privilege and Dynamic Boundaries"
+    tags: [agent-identity, iam, least-privilege]
+    role: [ai-security-engineer]
+    phase: [build, operate]
+    frameworks: [CIS-Controls-v8, NIST-SP-800-53-Rev5, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "45-90min"
+    file: skills/agent-identity/least-privilege-dynamic/SKILL.md
+
+  - id: agent-permission-audit
+    name: "Agent Permission and Access Audit"
+    tags: [agent-identity, audit, iam]
+    role: [ai-security-engineer]
+    phase: [operate, review]
+    frameworks: [CIS-Controls-v8, NIST-SP-800-53-Rev5, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "45-90min"
+    file: skills/agent-identity/agent-permission-audit/SKILL.md
+
+  - id: adaptive-authentication
+    name: "Adaptive Authentication for Agent Operations"
+    tags: [agent-identity, authentication, step-up]
+    role: [ai-security-engineer, identity-engineer]
+    phase: [design, build]
+    frameworks: [NIST-SP-800-63B, OWASP-ASVS-4.0.3, AWS-Agentic-AI-Prescriptive]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-identity/adaptive-authentication/SKILL.md
+
+  # -- Agent Alignment & Human Oversight -----------------------------------
+  - id: guardrails-alignment
+    name: "Guardrails and Alignment Controls Review"
+    tags: [agent-alignment, guardrails, review]
+    role: [ai-security-engineer, ml-engineer]
+    phase: [build, operate, review]
+    frameworks: [OWASP-LLM01-2025, OWASP-Agentic-AI, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-alignment/guardrails-alignment/SKILL.md
+
+  - id: human-in-the-loop
+    name: "Human-in-the-Loop Design for Agents"
+    tags: [agent-alignment, hitl, design]
+    role: [ai-architect, ai-security-engineer]
+    phase: [design, build, review]
+    frameworks: [OWASP-Agentic-AI, NIST-AI-RMF-1.0, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "45-90min"
+    file: skills/agent-alignment/human-in-the-loop/SKILL.md
+
+  - id: multi-reviewer-consensus
+    name: "Multi-Reviewer Consensus for Critical Operations"
+    tags: [agent-alignment, hitl, four-eyes]
+    role: [ai-security-engineer, grc]
+    phase: [build, operate]
+    frameworks: [NIST-AI-RMF-1.0, ISO-IEC-42001-2023, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-alignment/multi-reviewer-consensus/SKILL.md
+
+  - id: reviewer-cognitive-load
+    name: "Reviewer Cognitive Load Review"
+    tags: [agent-alignment, hitl, operations]
+    role: [ai-security-engineer, grc]
+    phase: [operate]
+    frameworks: [NIST-AI-RMF-1.0, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-alignment/reviewer-cognitive-load/SKILL.md
+
+  - id: confidence-indicators-review
+    name: "Confidence Indicators for Human Review"
+    tags: [agent-alignment, hitl, confidence]
+    role: [ai-security-engineer]
+    phase: [build, operate]
+    frameworks: [OWASP-LLM09-2025, NIST-AI-RMF-1.0, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-alignment/confidence-indicators-review/SKILL.md
+
+  # -- Agent Observability -------------------------------------------------
+  - id: decision-artifact-logging
+    name: "Agent Decision Artifact Logging"
+    tags: [agent-observability, logging, non-repudiation]
+    role: [ai-security-engineer, grc]
+    phase: [build, operate]
+    frameworks: [NIST-SP-800-53-Rev5, NIST-AI-RMF-1.0, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/agent-observability/decision-artifact-logging/SKILL.md
+
+  - id: distributed-tracing-agents
+    name: "Distributed Tracing for Agents"
+    tags: [agent-observability, tracing]
+    role: [ai-security-engineer]
+    phase: [build, operate]
+    frameworks: [NIST-SP-800-92, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-observability/distributed-tracing-agents/SKILL.md
+
+  - id: behavioural-baselines
+    name: "Agent Behavioural Baselines"
+    tags: [agent-observability, baseline, anomaly]
+    role: [ai-security-engineer, soc-analyst]
+    phase: [operate]
+    frameworks: [MITRE-ATLAS, OWASP-LLM09-2025, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/agent-observability/behavioural-baselines/SKILL.md
+
+  # -- Multi-Agent Orchestration -------------------------------------------
+  - id: inter-agent-message-signing
+    name: "Inter-Agent Message Signing"
+    tags: [multi-agent, signing, encryption]
+    role: [ai-security-engineer]
+    phase: [build]
+    frameworks: [OWASP-Agentic-AI, NIST-SP-800-57, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/multi-agent/inter-agent-message-signing/SKILL.md
+
+  - id: orchestration-workflow-security
+    name: "Multi-Agent Orchestration Workflow Security"
+    tags: [multi-agent, workflow, orchestration]
+    role: [ai-security-engineer]
+    phase: [build, review]
+    frameworks: [OWASP-Agentic-AI, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/multi-agent/orchestration-workflow-security/SKILL.md
+
+  - id: trust-boundaries-agents
+    name: "Trust Boundaries Between Agents"
+    tags: [multi-agent, zero-trust, boundaries]
+    role: [ai-architect, ai-security-engineer]
+    phase: [design, build]
+    frameworks: [NIST-SP-800-207, OWASP-Agentic-AI, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/multi-agent/trust-boundaries-agents/SKILL.md
+
+  - id: coordination-anomaly-detection
+    name: "Multi-Agent Coordination Anomaly Detection"
+    tags: [multi-agent, anomaly, detection]
+    role: [ai-security-engineer, soc-analyst]
+    phase: [operate]
+    frameworks: [MITRE-ATLAS, OWASP-Agentic-AI, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/multi-agent/coordination-anomaly-detection/SKILL.md
+
+  # -- Agent Containment & Response ----------------------------------------
+  - id: behavioural-anomaly-containment
+    name: "Behavioural Anomaly Containment"
+    tags: [agent-containment, response, automation]
+    role: [ai-incident-responder, ai-security-engineer]
+    phase: [operate, respond]
+    frameworks: [NIST-SP-800-61r2, MITRE-ATLAS, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/agent-containment/behavioural-anomaly-containment/SKILL.md
+
+  - id: emergency-shutdown-agent
+    name: "Emergency Shutdown Procedures for Agents"
+    tags: [agent-containment, shutdown, kill-switch]
+    role: [ai-incident-responder]
+    phase: [respond]
+    frameworks: [NIST-SP-800-61r2, OWASP-Agentic-AI, AWS-Agentic-AI-Prescriptive]
+    difficulty: intermediate
+    time_estimate: "15-30min"
+    file: skills/agent-containment/emergency-shutdown-agent/SKILL.md
+
+  - id: forensic-preservation-agent
+    name: "Forensic Preservation for Agent Incidents"
+    tags: [agent-containment, forensics]
+    role: [ai-incident-responder, forensics-analyst]
+    phase: [respond]
+    frameworks: [NIST-SP-800-86, RFC-3227, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "30-60min"
+    file: skills/agent-containment/forensic-preservation-agent/SKILL.md
+
+  # -- Agent I/O Security --------------------------------------------------
+  - id: multi-layer-input-validation
+    name: "Multi-Layer Input Validation for Agents"
+    tags: [agent-io, validation, input]
+    role: [ai-security-engineer, appsec-engineer]
+    phase: [build, review]
+    frameworks: [OWASP-LLM01-2025, CWE-Top-25, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-io/multi-layer-input-validation/SKILL.md
+
+  - id: indirect-prompt-injection-defense
+    name: "Indirect Prompt Injection Defense"
+    tags: [agent-io, prompt-injection, rag]
+    role: [ai-security-engineer, ai-red-teamer]
+    phase: [build, review, operate]
+    frameworks: [OWASP-LLM01-2025, MITRE-ATLAS, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/agent-io/indirect-prompt-injection-defense/SKILL.md
+
+  - id: output-filtering-sensitive
+    name: "Output Filtering for Sensitive Data"
+    tags: [agent-io, output, pii, dlp]
+    role: [ai-security-engineer]
+    phase: [build, operate]
+    frameworks: [OWASP-LLM02-2025, NIST-SP-800-53-Rev5, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-io/output-filtering-sensitive/SKILL.md
+
+  - id: input-obfuscation-stripping
+    name: "Input Obfuscation and Unicode Stripping"
+    tags: [agent-io, unicode, obfuscation]
+    role: [ai-security-engineer]
+    phase: [build]
+    frameworks: [OWASP-LLM01-2025, AWS-Agentic-AI-Prescriptive]
+    difficulty: intermediate
+    time_estimate: "20-40min"
+    file: skills/agent-io/input-obfuscation-stripping/SKILL.md
+
+  # -- Agent Testing & Red Team --------------------------------------------
+  - id: automated-prompt-testing
+    name: "Automated Prompt Testing Suite"
+    tags: [agent-testing, prompt-injection, ci]
+    role: [ai-security-engineer, ai-red-teamer]
+    phase: [build, review]
+    frameworks: [OWASP-LLM01-2025, MITRE-ATLAS, AWS-Agentic-AI-Prescriptive]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/agent-testing/automated-prompt-testing/SKILL.md
+
+  - id: agentic-red-team
+    name: "Agentic AI Red Team Program"
+    tags: [agent-testing, red-team, purple-team]
+    role: [ai-red-teamer, ai-security-engineer]
+    phase: [operate, review]
+    frameworks: [OWASP-Agentic-Top-10-2026, OWASP-Agentic-AI, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "variable"
+    file: skills/agent-testing/agentic-red-team/SKILL.md
+
+  - id: context-aware-pentest
+    name: "Context-Aware Agentic Pen Test"
+    tags: [agent-testing, pentest, multi-agent]
+    role: [ai-red-teamer]
+    phase: [operate, review]
+    frameworks: [OWASP-Agentic-Top-10-2026, CVSS-4.0, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "variable"
+    file: skills/agent-testing/context-aware-pentest/SKILL.md
+
+  - id: scoped-pentest-sandbox
+    name: "Scoped Pentest Sandbox for Agentic Systems"
+    tags: [agent-testing, sandbox, pentest]
+    role: [ai-red-teamer, ai-security-engineer]
+    phase: [build, operate]
+    frameworks: [OWASP-Testing-Guide-v4.2, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "variable"
+    file: skills/agent-testing/scoped-pentest-sandbox/SKILL.md
+
+  - id: continuous-security-validation
+    name: "Continuous Security Validation for Agentic Systems"
+    tags: [agent-testing, ci, automation]
+    role: [mlops-security, ai-security-engineer]
+    phase: [build, operate]
+    frameworks: [NIST-SP-800-218A, SLSA-v1.0, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/agent-testing/continuous-security-validation/SKILL.md
+
+  - id: agentic-vuln-scanning-sdlc
+    name: "Agentic Vulnerability Scanning Across the SDLC"
+    tags: [agent-testing, vuln-scan, sdlc]
+    role: [mlops-security, ai-security-engineer]
+    phase: [design, build, operate]
+    frameworks: [NIST-SP-800-218A, CWE-Top-25, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/agent-testing/agentic-vuln-scanning-sdlc/SKILL.md
+
+  # -- Threat Detection ----------------------------------------------------
+  - id: runtime-threat-correlation
+    name: "Runtime Threat Correlation for Agents"
+    tags: [agent-threat-detection, correlation]
+    role: [soc-analyst, ai-security-engineer]
+    phase: [operate]
+    frameworks: [MITRE-ATTACK-v16, MITRE-ATLAS, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/agent-threat-detection/runtime-threat-correlation/SKILL.md
+
+  - id: guardrail-metrics-detection
+    name: "Guardrail Metrics as Detection Signal"
+    tags: [agent-threat-detection, guardrails, metrics]
+    role: [soc-analyst, ai-security-engineer]
+    phase: [operate]
+    frameworks: [OWASP-LLM09-2025, MITRE-ATLAS, AWS-Agentic-AI-Prescriptive]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-threat-detection/guardrail-metrics-detection/SKILL.md
+
+  - id: toxic-combination-detection
+    name: "Toxic Combination Detection"
+    tags: [agent-threat-detection, correlation, posture]
+    role: [ai-security-engineer, soc-analyst]
+    phase: [operate]
+    frameworks: [CIS-Controls-v8, NIST-SP-800-53-Rev5, AWS-Agentic-AI-Prescriptive]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/agent-threat-detection/toxic-combination-detection/SKILL.md
+
+  # -- Agent Lifecycle -----------------------------------------------------
+  - id: prompt-as-code
+    name: "Prompts as Code Lifecycle"
+    tags: [agent-lifecycle, prompts, ci]
+    role: [mlops-security, ai-security-engineer]
+    phase: [build]
+    frameworks: [NIST-SP-800-218A, SLSA-v1.0, AWS-Agentic-AI-Prescriptive]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-lifecycle/prompt-as-code/SKILL.md
+
+  - id: agent-cicd-quality-gates
+    name: "Agent CI/CD Quality Gates"
+    tags: [agent-lifecycle, cicd, quality]
+    role: [mlops-security]
+    phase: [build]
+    frameworks: [SLSA-v1.0, OWASP-CICD-Top-10, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "45-90min"
+    file: skills/agent-lifecycle/agent-cicd-quality-gates/SKILL.md
+
+  - id: agent-portfolio-governance
+    name: "Agent Portfolio Governance"
+    tags: [agent-lifecycle, governance, portfolio]
+    role: [grc, ai-architect]
+    phase: [operate, review]
+    frameworks: [ISO-IEC-42001-2023, NIST-AI-RMF-1.0, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "45-90min"
+    file: skills/agent-lifecycle/agent-portfolio-governance/SKILL.md
+
+  - id: agent-decommissioning
+    name: "Agent Decommissioning Lifecycle"
+    tags: [agent-lifecycle, decommissioning]
+    role: [grc, ai-security-engineer]
+    phase: [operate]
+    frameworks: [ISO-IEC-42001-2023, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-lifecycle/agent-decommissioning/SKILL.md
+
+  - id: model-system-card-review
+    name: "Model System Card Review"
+    tags: [agent-lifecycle, model, review]
+    role: [grc, ai-security-engineer]
+    phase: [design, review]
+    frameworks: [NIST-AI-RMF-1.0, ISO-IEC-42001-2023, AWS-Agentic-AI-Prescriptive]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-lifecycle/model-system-card-review/SKILL.md
+
+  - id: coding-agent-steering-security
+    name: "AI Coding Agent Steering File Security"
+    tags: [agent-lifecycle, steering, coding-agents]
+    role: [ai-security-engineer, mlops-security]
+    phase: [build, review]
+    frameworks: [OWASP-LLM01-2025, OWASP-Agentic-AI]
+    difficulty: intermediate
+    time_estimate: "20-45min"
+    file: skills/agent-lifecycle/coding-agent-steering-security/SKILL.md
+
+  # -- Agent Data ----------------------------------------------------------
+  - id: fine-tune-data-pipelines
+    name: "Fine-Tune Data Pipeline Review"
+    tags: [agent-data, pipeline, poisoning]
+    role: [ml-engineer, ai-security-engineer]
+    phase: [build, operate]
+    frameworks: [NIST-AI-RMF-1.0, OWASP-LLM04-2025, AWS-Agentic-AI-Prescriptive]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/agent-data/fine-tune-data-pipelines/SKILL.md
+
+  - id: deterministic-broker-sensitive
+    name: "Deterministic Broker for Sensitive Systems"
+    tags: [agent-data, broker, sensitive]
+    role: [ai-architect, ai-security-engineer]
+    phase: [design, build]
+    frameworks: [OWASP-Agentic-AI, AWS-Agentic-AI-Prescriptive]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/agent-data/deterministic-broker-sensitive/SKILL.md
+
+  - id: dlp-agent-flows
+    name: "DLP for Agent Flows"
+    tags: [agent-data, dlp, exfiltration]
+    role: [ai-security-engineer, grc]
+    phase: [build, operate]
+    frameworks: [NIST-SP-800-53-Rev5, OWASP-LLM02-2025, AWS-Agentic-AI-Prescriptive]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-data/dlp-agent-flows/SKILL.md
+
+  - id: data-governance-agent
+    name: "Agent Data Governance Review"
+    tags: [agent-data, governance]
+    role: [grc, ai-security-engineer]
+    phase: [design, operate, review]
+    frameworks: [ISO-IEC-42001-2023, NIST-AI-RMF-1.0, AWS-Agentic-AI-Prescriptive]
+    difficulty: intermediate
+    time_estimate: "45-90min"
+    file: skills/agent-data/data-governance-agent/SKILL.md
+
+  # -- Agent Infrastructure ------------------------------------------------
+  - id: account-isolation-pattern
+    name: "Account and Workload Isolation Pattern"
+    tags: [agent-infrastructure, isolation, account]
+    role: [cloud-security-engineer, ai-security-engineer]
+    phase: [design, build]
+    frameworks: [NIST-SP-800-53-Rev5, CIS-Controls-v8, AWS-Agentic-AI-Prescriptive]
+    difficulty: intermediate
+    time_estimate: "45-90min"
+    file: skills/agent-infrastructure/account-isolation-pattern/SKILL.md
+
+  - id: edge-protection-ai
+    name: "Edge Protection for AI Workloads"
+    tags: [agent-infrastructure, waf, rate-limit]
+    role: [ai-security-engineer, cloud-security-engineer]
+    phase: [build, operate]
+    frameworks: [OWASP-Top-10-2021, OWASP-API-Security-2023, AWS-Agentic-AI-Prescriptive]
+    difficulty: intermediate
+    time_estimate: "30-60min"
+    file: skills/agent-infrastructure/edge-protection-ai/SKILL.md
+
+  - id: cnapp-integration
+    name: "CNAPP Integration for Agentic Workloads"
+    tags: [agent-infrastructure, cnapp, posture]
+    role: [cloud-security-engineer, ai-security-engineer]
+    phase: [operate]
+    frameworks: [CIS-Controls-v8, AWS-Agentic-AI-Prescriptive]
+    difficulty: intermediate
+    time_estimate: "45-90min"
+    file: skills/agent-infrastructure/cnapp-integration/SKILL.md
+
+  - id: break-glass-runbooks
+    name: "Break-Glass Runbooks for Agentic Systems"
+    tags: [agent-infrastructure, break-glass, runbook]
+    role: [ai-incident-responder]
+    phase: [operate, respond]
+    frameworks: [NIST-SP-800-61r2, AWS-Agentic-AI-Lens]
+    difficulty: intermediate
+    time_estimate: "45-90min"
+    file: skills/agent-infrastructure/break-glass-runbooks/SKILL.md
+
+  # -- Agent Recovery ------------------------------------------------------
+  - id: ai-business-continuity
+    name: "AI Business Continuity Plan"
+    tags: [agent-recovery, bcp, resilience]
+    role: [grc, ai-incident-responder]
+    phase: [design, operate, respond]
+    frameworks: [NIST-SP-800-34, ISO-22301, AWS-Agentic-AI-Prescriptive]
+    difficulty: intermediate
+    time_estimate: "60-120min"
+    file: skills/agent-recovery/ai-business-continuity/SKILL.md
+
+  - id: automated-recovery-fallback
+    name: "Automated Recovery with Fallback Chains"
+    tags: [agent-recovery, recovery, fallback]
+    role: [ai-security-engineer, ai-incident-responder]
+    phase: [build, respond]
+    frameworks: [NIST-SP-800-61r2, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/agent-recovery/automated-recovery-fallback/SKILL.md
+
+  - id: workflow-stage-checkpoint
+    name: "Workflow Stage Checkpointing for Long-Running Agents"
+    tags: [agent-recovery, checkpoint, idempotency]
+    role: [ai-architect, ai-security-engineer]
+    phase: [design, build]
+    frameworks: [NIST-SP-800-34, AWS-Agentic-AI-Lens]
+    difficulty: advanced
+    time_estimate: "45-90min"
+    file: skills/agent-recovery/workflow-stage-checkpoint/SKILL.md
+
+roles:
+  - id: ai-security-engineer
+    name: "AI Security Engineer"
+    description: "Building security into agentic AI products and infrastructure"
+    skills: [tool-parameter-validation, memory-isolation, agent-identity-separation, output-filtering-sensitive, least-privilege-dynamic, decision-artifact-logging]
+    file: roles/ai-security-engineer/SKILL.md
+
+  - id: ai-architect
+    name: "AI Architect"
+    description: "Agentic system design, threat modeling, security architecture"
+    skills: [llm-scope-minimization, agent-scoping-review, trust-boundaries-agents, orchestration-workflow-security, human-in-the-loop, model-system-card-review]
+    file: roles/ai-architect/SKILL.md
+
+  - id: mlops-security
+    name: "MLOps Security"
+    description: "Securing the AI development lifecycle"
+    skills: [prompt-as-code, agent-cicd-quality-gates, fine-tune-data-pipelines, continuous-security-validation, agentic-vuln-scanning-sdlc, coding-agent-steering-security]
+    file: roles/mlops-security/SKILL.md
+
+  - id: ai-red-teamer
+    name: "AI Red Teamer"
+    description: "Offensive assessment of agentic systems"
+    skills: [agentic-red-team, context-aware-pentest, indirect-prompt-injection-defense, automated-prompt-testing, scoped-pentest-sandbox]
+    file: roles/ai-red-teamer/SKILL.md
+
+  - id: ai-incident-responder
+    name: "AI Incident Responder"
+    description: "Containment, forensics, and recovery for agentic incidents"
+    skills: [behavioural-anomaly-containment, emergency-shutdown-agent, forensic-preservation-agent, runtime-threat-correlation, ai-business-continuity, automated-recovery-fallback]
+    file: roles/ai-incident-responder/SKILL.md

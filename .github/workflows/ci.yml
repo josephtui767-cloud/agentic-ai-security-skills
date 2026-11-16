@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  lint-skills:
+    name: Validate SKILL.md frontmatter
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: ruby/setup-ruby@1a18b0c9b5d5b56edc55abd1b53ccc74afe66a73 # v1.252.0
+        with:
+          ruby-version: "3.3"
+      - name: Validate skill schema
+        run: ruby scripts/validate_skill_schema.rb
+
+  validate-index:
+    name: Validate index.yaml consistency
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: ruby/setup-ruby@1a18b0c9b5d5b56edc55abd1b53ccc74afe66a73 # v1.252.0
+        with:
+          ruby-version: "3.3"
+      - name: Validate index
+        run: ruby scripts/validate_index.rb
+
+  validate-frameworks:
+    name: Validate framework registry
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: ruby/setup-ruby@1a18b0c9b5d5b56edc55abd1b53ccc74afe66a73 # v1.252.0
+        with:
+          ruby-version: "3.3"
+      - name: Validate frameworks
+        run: ruby scripts/validate_framework_registry.rb
+
+  injection-scan:
+    name: Prompt-injection, malware, and secret scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Run injection scan
+        run: bash scripts/injection_scan.sh

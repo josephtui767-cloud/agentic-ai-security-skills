@@ -1,0 +1,310 @@
+schema_version: "1.0.0"
+last_reviewed: "2026-11-16"
+required_families:
+  - OWASP
+  - NIST
+  - MITRE
+  - CIS
+  - ISO
+  - SLSA
+  - AWS
+references:
+  # ---------------- OWASP ----------------
+  - id: OWASP-LLM-Top-10-2025
+    family: OWASP
+    name: OWASP Top 10 for Large Language Model Applications
+    version: "2025"
+    url: https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/
+    date_reviewed: "2026-11-16"
+    owner: ai-security
+    aliases: [OWASP-LLM01-2025, OWASP-LLM02-2025, OWASP-LLM03-2025, OWASP-LLM04-2025, OWASP-LLM05-2025, OWASP-LLM06-2025, OWASP-LLM07-2025, OWASP-LLM08-2025, OWASP-LLM09-2025, OWASP-LLM10-2025]
+
+  - id: OWASP-Agentic-Top-10-2026
+    family: OWASP
+    name: OWASP Top 10 for Agentic Applications
+    version: "2026"
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    date_reviewed: "2026-11-16"
+    owner: ai-security
+    aliases: [OWASP-Agentic-Top-10, OWASP-Agentic-Top-10-2026]
+
+  - id: OWASP-Agentic-AI
+    family: OWASP
+    name: OWASP Agentic AI Threats and Mitigations
+    version: "current"
+    url: https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/
+    date_reviewed: "2026-11-16"
+    owner: ai-security
+    aliases: [OWASP-Agentic-AI, OWASP-Agentic-ASI01, OWASP-Agentic-ASI02, OWASP-Agentic-ASI03, OWASP-Agentic-ASI04, OWASP-Agentic-ASI05, OWASP-Agentic-ASI06, OWASP-Agentic-ASI07, OWASP-Agentic-ASI08, OWASP-Agentic-ASI09, OWASP-Agentic-ASI10]
+
+  - id: OWASP-ASVS-4.0.3
+    family: OWASP
+    name: OWASP Application Security Verification Standard
+    version: "4.0.3"
+    url: https://owasp.org/www-project-application-security-verification-standard/
+    date_reviewed: "2026-11-16"
+    owner: appsec
+    aliases: [OWASP-ASVS]
+
+  - id: OWASP-Top-10-2021
+    family: OWASP
+    name: OWASP Top 10
+    version: "2021"
+    url: https://owasp.org/Top10/
+    date_reviewed: "2026-11-16"
+    owner: appsec
+    aliases: [OWASP-Top-10]
+
+  - id: OWASP-API-Security-2023
+    family: OWASP
+    name: OWASP API Security Top 10
+    version: "2023"
+    url: https://owasp.org/API-Security/editions/2023/en/0x00-header/
+    date_reviewed: "2026-11-16"
+    owner: appsec
+
+  - id: OWASP-CICD-Top-10
+    family: OWASP
+    name: OWASP Top 10 CI/CD Security Risks
+    version: "current"
+    url: https://owasp.org/www-project-top-10-ci-cd-security-risks/
+    date_reviewed: "2026-11-16"
+    owner: ai-security
+
+  - id: OWASP-Testing-Guide-v4.2
+    family: OWASP
+    name: OWASP Web Security Testing Guide
+    version: "4.2"
+    url: https://owasp.org/www-project-web-security-testing-guide/
+    date_reviewed: "2026-11-16"
+    owner: appsec
+
+  - id: OWASP-Session-Management
+    family: OWASP
+    name: OWASP Session Management Cheat Sheet
+    version: "current"
+    url: https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html
+    date_reviewed: "2026-11-16"
+    owner: appsec
+
+  - id: OWASP-Threat-Modeling
+    family: OWASP
+    name: OWASP Threat Modeling Cheat Sheet
+    version: "current"
+    url: https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html
+    date_reviewed: "2026-11-16"
+    owner: appsec
+
+  # ---------------- NIST ----------------
+  - id: NIST-AI-RMF-1.0
+    family: NIST
+    name: NIST AI Risk Management Framework
+    version: "1.0"
+    url: https://www.nist.gov/itl/ai-risk-management-framework
+    date_reviewed: "2026-11-16"
+    owner: ai-security
+    aliases: [NIST-AI-RMF]
+
+  - id: NIST-SP-800-218A
+    family: NIST
+    name: Secure Software Development Practices for Generative AI and Dual-Use Foundation Models
+    version: "final"
+    url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218A.pdf
+    date_reviewed: "2026-11-16"
+    owner: ai-security
+
+  - id: NIST-SP-800-53-Rev5
+    family: NIST
+    name: Security and Privacy Controls for Information Systems and Organizations
+    version: "Rev 5"
+    url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf
+    date_reviewed: "2026-11-16"
+    owner: compliance
+    aliases: [NIST-SP-800-53, NIST-SP-800-53-AC-2, NIST-SP-800-53-AC-6, NIST-SP-800-53-AU, NIST-SP-800-53-SC-7, NIST-SP-800-53-SC-8]
+
+  - id: NIST-SP-800-61r2
+    family: NIST
+    name: Computer Security Incident Handling Guide
+    version: "Rev 2"
+    url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf
+    date_reviewed: "2026-11-16"
+    owner: incident-response
+    aliases: [NIST-SP-800-61]
+
+  - id: NIST-SP-800-86
+    family: NIST
+    name: Guide to Integrating Forensic Techniques into Incident Response
+    version: "final"
+    url: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-86.pdf
+    date_reviewed: "2026-11-16"
+    owner: incident-response
+
+  - id: NIST-SP-800-63B
+    family: NIST
+    name: Digital Identity Guidelines - Authentication and Lifecycle Management
+    version: "final"
+    url: https://pages.nist.gov/800-63-3/sp800-63b.html
+    date_reviewed: "2026-11-16"
+    owner: identity
+
+  - id: NIST-SP-800-207
+    family: NIST
+    name: Zero Trust Architecture
+    version: "final"
+    url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf
+    date_reviewed: "2026-11-16"
+    owner: identity
+
+  - id: NIST-SP-800-57
+    family: NIST
+    name: Recommendation for Key Management
+    version: "Part 1 Rev 5"
+    url: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r5.pdf
+    date_reviewed: "2026-11-16"
+    owner: cryptography
+
+  - id: NIST-SP-800-34
+    family: NIST
+    name: Contingency Planning Guide for Federal Information Systems
+    version: "Rev 1"
+    url: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-34r1.pdf
+    date_reviewed: "2026-11-16"
+    owner: resilience
+
+  - id: NIST-SP-800-92
+    family: NIST
+    name: Guide to Computer Security Log Management
+    version: "final"
+    url: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-92.pdf
+    date_reviewed: "2026-11-16"
+    owner: secops
+
+  - id: NIST-CSF-2.0
+    family: NIST
+    name: NIST Cybersecurity Framework
+    version: "2.0"
+    url: https://www.nist.gov/cyberframework
+    date_reviewed: "2026-11-16"
+    owner: compliance
+
+  # ---------------- MITRE ----------------
+  - id: MITRE-ATLAS
+    family: MITRE
+    name: MITRE Adversarial Threat Landscape for Artificial-Intelligence Systems
+    version: "current"
+    url: https://atlas.mitre.org/
+    date_reviewed: "2026-11-16"
+    owner: ai-security
+
+  - id: MITRE-ATTACK-v16
+    family: MITRE
+    name: MITRE ATT&CK
+    version: "v16"
+    url: https://attack.mitre.org/
+    date_reviewed: "2026-11-16"
+    owner: secops
+    aliases: [MITRE-ATT-CK, MITRE-ATTACK]
+
+  # ---------------- CIS ----------------
+  - id: CIS-Controls-v8
+    family: CIS
+    name: CIS Critical Security Controls
+    version: "v8"
+    url: https://www.cisecurity.org/controls/v8
+    date_reviewed: "2026-11-16"
+    owner: secops
+
+  # ---------------- ISO ----------------
+  - id: ISO-IEC-42001-2023
+    family: ISO
+    name: ISO/IEC 42001 Artificial Intelligence Management System
+    version: "2023"
+    url: https://www.iso.org/standard/42001
+    date_reviewed: "2026-11-16"
+    owner: compliance
+    aliases: [ISO-42001]
+
+  - id: ISO-IEC-27001-2022
+    family: ISO
+    name: ISO/IEC 27001 Information Security Management
+    version: "2022"
+    url: https://www.iso.org/standard/27001
+    date_reviewed: "2026-11-16"
+    owner: compliance
+    aliases: [ISO-27001]
+
+  - id: ISO-22301
+    family: ISO
+    name: ISO 22301 Business Continuity Management Systems
+    version: "2019"
+    url: https://www.iso.org/standard/75106.html
+    date_reviewed: "2026-11-16"
+    owner: resilience
+
+  # ---------------- SLSA ----------------
+  - id: SLSA-v1.0
+    family: SLSA
+    name: Supply-chain Levels for Software Artifacts
+    version: "1.0"
+    url: https://slsa.dev/spec/v1.0/
+    date_reviewed: "2026-11-16"
+    owner: devsecops
+
+  # ---------------- AWS ----------------
+  - id: AWS-Agentic-AI-Lens
+    family: AWS
+    name: AWS Well-Architected Agentic AI Lens
+    version: "2026-06-10"
+    url: https://docs.aws.amazon.com/wellarchitected/latest/agentic-ai-lens/agentic-ai-lens.html
+    date_reviewed: "2026-11-16"
+    owner: ai-security
+    aliases: [AGENTSEC01, AGENTSEC02, AGENTSEC03, AGENTSEC04, AGENTSEC05, AGENTSEC06, AGENTSEC07, AGENTSEC08, AGENTSEC09]
+
+  - id: AWS-Agentic-AI-Prescriptive
+    family: AWS
+    name: AWS Prescriptive Guidance Security for Agentic AI
+    version: "current"
+    url: https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-security/introduction.html
+    date_reviewed: "2026-11-16"
+    owner: ai-security
+
+  # ---------------- Protocol / Spec ----------------
+  - id: MCP-Spec
+    family: MCP
+    name: Model Context Protocol Specification
+    version: "current"
+    url: https://modelcontextprotocol.io/specification
+    date_reviewed: "2026-11-16"
+    owner: ai-security
+
+  - id: OAuth-2.1
+    family: IETF
+    name: The OAuth 2.1 Authorization Framework
+    version: "draft"
+    url: https://oauth.net/2.1/
+    date_reviewed: "2026-11-16"
+    owner: identity
+
+  - id: CWE-Top-25
+    family: CWE
+    name: CWE Top 25 Most Dangerous Software Weaknesses
+    version: "current"
+    url: https://cwe.mitre.org/top25/
+    date_reviewed: "2026-11-16"
+    owner: appsec
+
+  - id: RFC-3227
+    family: IETF
+    name: Guidelines for Evidence Collection and Archiving
+    version: "RFC 3227"
+    url: https://www.rfc-editor.org/rfc/rfc3227
+    date_reviewed: "2026-11-16"
+    owner: incident-response
+
+  - id: CVSS-4.0
+    family: FIRST
+    name: Common Vulnerability Scoring System
+    version: "4.0"
+    url: https://www.first.org/cvss/v4.0/
+    date_reviewed: "2026-11-16"
+    owner: vuln-management

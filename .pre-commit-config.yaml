@@ -1,0 +1,30 @@
+repos:
+  - repo: local
+    hooks:
+      - id: validate-skill-schema
+        name: Validate SKILL.md frontmatter
+        entry: ruby scripts/validate_skill_schema.rb
+        language: system
+        files: "SKILL\\.md$"
+        pass_filenames: true
+
+      - id: validate-index
+        name: Validate index.yaml
+        entry: ruby scripts/validate_index.rb
+        language: system
+        files: "^(index\\.yaml|skills/.*/SKILL\\.md|roles/.*/SKILL\\.md)$"
+        pass_filenames: false
+
+      - id: validate-frameworks
+        name: Validate framework registry
+        entry: ruby scripts/validate_framework_registry.rb
+        language: system
+        files: "^(data/frameworks\\.yaml|skills/.*/SKILL\\.md|roles/.*/SKILL\\.md)$"
+        pass_filenames: false
+
+      - id: injection-scan
+        name: Prompt-injection / malware / secret scan
+        entry: bash scripts/injection_scan.sh
+        language: system
+        pass_filenames: false
+        always_run: true
