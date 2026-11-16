@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="520" fill="url(#bg)"/>
+
+  <!-- Section titles -->
+  <text x="100" y="40" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="600">1. AGENT RUNTIME</text>
+  <text x="440" y="40" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="600">2. SKILL</text>
+  <text x="760" y="40" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="600">3. NORMALIZED FINDING</text>
+  <text x="1040" y="40" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="600">4. OUTPUT</text>
+
+  <!-- Column 1: Agent runtimes -->
+  <g transform="translate(60, 70)">
+    <rect x="0" y="0" width="280" height="340" rx="10" fill="white" stroke="#CBD5E1" stroke-width="1.5"/>
+
+    <g transform="translate(20, 30)">
+      <rect x="0" y="0" width="240" height="40" rx="6" fill="#F1F5F9"/>
+      <text x="20" y="25" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="600">Claude Code</text>
+      <text x="220" y="25" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11" text-anchor="end">native</text>
+    </g>
+    <g transform="translate(20, 80)">
+      <rect x="0" y="0" width="240" height="40" rx="6" fill="#F1F5F9"/>
+      <text x="20" y="25" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="600">Cursor</text>
+      <text x="220" y="25" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11" text-anchor="end">.cursor/rules</text>
+    </g>
+    <g transform="translate(20, 130)">
+      <rect x="0" y="0" width="240" height="40" rx="6" fill="#F1F5F9"/>
+      <text x="20" y="25" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="600">Kiro</text>
+      <text x="220" y="25" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11" text-anchor="end">.kiro/steering</text>
+    </g>
+    <g transform="translate(20, 180)">
+      <rect x="0" y="0" width="240" height="40" rx="6" fill="#F1F5F9"/>
+      <text x="20" y="25" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="600">GitHub Copilot</text>
+      <text x="220" y="25" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11" text-anchor="end">.github/instructions</text>
+    </g>
+    <g transform="translate(20, 230)">
+      <rect x="0" y="0" width="240" height="40" rx="6" fill="#F1F5F9"/>
+      <text x="20" y="25" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="600">Codex / Gemini CLI</text>
+      <text x="220" y="25" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11" text-anchor="end">--context</text>
+    </g>
+    <g transform="translate(20, 280)">
+      <rect x="0" y="0" width="240" height="40" rx="6" fill="#F1F5F9"/>
+      <text x="20" y="25" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="600">Any MCP client</text>
+      <text x="220" y="25" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11" text-anchor="end">SKILL.md path</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1 -->
+  <line x1="350" y1="240" x2="400" y2="240" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Column 2: Skill -->
+  <g transform="translate(400, 70)">
+    <rect x="0" y="0" width="280" height="340" rx="10" fill="white" stroke="#CBD5E1" stroke-width="1.5"/>
+
+    <text x="140" y="30" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="600" text-anchor="middle">SKILL.md</text>
+
+    <rect x="20" y="50" width="240" height="26" rx="4" fill="#DBEAFE"/>
+    <text x="30" y="68" fill="#1E40AF" font-family="ui-monospace, Menlo, Monaco, monospace" font-size="12">frontmatter (YAML)</text>
+
+    <rect x="20" y="86" width="240" height="26" rx="4" fill="#F1F5F9"/>
+    <text x="30" y="104" fill="#334155" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12">1. When to Use</text>
+
+    <rect x="20" y="122" width="240" height="26" rx="4" fill="#F1F5F9"/>
+    <text x="30" y="140" fill="#334155" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12">2. What to Detect</text>
+
+    <rect x="20" y="158" width="240" height="26" rx="4" fill="#F1F5F9"/>
+    <text x="30" y="176" fill="#334155" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12">3. Rules (hard constraints)</text>
+
+    <rect x="20" y="194" width="240" height="26" rx="4" fill="#F1F5F9"/>
+    <text x="30" y="212" fill="#334155" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12">4. Remediation + test strategy</text>
+
+    <rect x="20" y="230" width="240" height="26" rx="4" fill="#F1F5F9"/>
+    <text x="30" y="248" fill="#334155" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12">5. Verification (binary)</text>
+
+    <rect x="20" y="266" width="240" height="26" rx="4" fill="#F1F5F9"/>
+    <text x="30" y="284" fill="#334155" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12">6. Gotchas (FP / traps)</text>
+
+    <rect x="20" y="302" width="240" height="22" rx="4" fill="#FEF3C7"/>
+    <text x="30" y="318" fill="#92400E" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11">cites real control IDs</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <line x1="690" y1="240" x2="740" y2="240" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Column 3: Normalized finding -->
+  <g transform="translate(740, 70)">
+    <rect x="0" y="0" width="240" height="340" rx="10" fill="white" stroke="#CBD5E1" stroke-width="1.5"/>
+
+    <text x="120" y="30" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="600" text-anchor="middle">finding.json</text>
+
+    <g font-family="ui-monospace, Menlo, Monaco, monospace" font-size="11" fill="#334155">
+      <text x="20" y="60">id</text>
+      <text x="20" y="80">title</text>
+      <text x="20" y="100">severity</text>
+      <text x="20" y="120">confidence</text>
+      <text x="20" y="140">framework_refs[]</text>
+      <text x="20" y="160">cwe_refs[]</text>
+      <text x="20" y="180">evidence[]</text>
+      <text x="20" y="200">remediations[]</text>
+      <text x="40" y="220">guidance</text>
+      <text x="40" y="240">blast_radius</text>
+      <text x="40" y="260">behavior_change_risk</text>
+      <text x="40" y="280">test_strategy</text>
+    </g>
+
+    <rect x="20" y="300" width="200" height="22" rx="4" fill="#DCFCE7"/>
+    <text x="30" y="316" fill="#166534" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="11">validated by CI</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <line x1="990" y1="240" x2="1030" y2="240" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Column 4: Outputs -->
+  <g transform="translate(1030, 70)">
+    <rect x="0" y="0" width="130" height="340" rx="10" fill="white" stroke="#CBD5E1" stroke-width="1.5"/>
+
+    <g transform="translate(10, 30)">
+      <rect x="0" y="0" width="110" height="40" rx="6" fill="#F1F5F9"/>
+      <text x="55" y="25" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">SARIF 2.1</text>
+    </g>
+    <g transform="translate(10, 80)">
+      <rect x="0" y="0" width="110" height="40" rx="6" fill="#F1F5F9"/>
+      <text x="55" y="25" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Tracker</text>
+    </g>
+    <g transform="translate(10, 130)">
+      <rect x="0" y="0" width="110" height="40" rx="6" fill="#F1F5F9"/>
+      <text x="55" y="25" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">PR review</text>
+    </g>
+    <g transform="translate(10, 180)">
+      <rect x="0" y="0" width="110" height="40" rx="6" fill="#F1F5F9"/>
+      <text x="55" y="25" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Report</text>
+    </g>
+    <g transform="translate(10, 230)">
+      <rect x="0" y="0" width="110" height="40" rx="6" fill="#F1F5F9"/>
+      <text x="55" y="25" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Dashboard</text>
+    </g>
+    <g transform="translate(10, 280)">
+      <rect x="0" y="0" width="110" height="40" rx="6" fill="#F1F5F9"/>
+      <text x="55" y="25" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">Compliance</text>
+    </g>
+  </g>
+
+  <!-- Bottom note: CI gate -->
+  <g transform="translate(60, 450)">
+    <rect x="0" y="0" width="1100" height="50" rx="10" fill="#0F172A"/>
+    <text x="30" y="30" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="600">CI gate</text>
+    <text x="110" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="13">frontmatter schema · index consistency · framework registry · prompt-injection / malware / secret scan</text>
+    <circle cx="1070" cy="25" r="7" fill="#22C55E"/>
+  </g>
+</svg>
